@@ -1,0 +1,112 @@
+/* build your layout */
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-image: url("images/sponge_background.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.left {
+  display: block;
+  height: 100%;
+  width: 50%;
+}
+.right {
+  display: block;
+  height: 100%;
+  width: 50%;
+}
+.row {
+  display: flex;
+  height: 50%;
+  width: 100%;
+}
+.skinny-row {
+  display: flex;
+  height: 25%;
+  width: 100%;
+}
+.box {
+  display: flex;
+  height: 100%;
+  width: 50%;
+}
+.hidden {
+  display: none;
+}
+
+/* enhance the UX */
+.opaque {
+  opacity: 0.5;
+}
+.hover-cursor {
+  cursor: pointer;
+}
+img:active {
+  transform: scale(0.75);
+}
+.clicked {
+  transform: scale(0.65);
+}
+
+.non-clickable:hover {
+  transform: scale(1);
+}
+
+/* colors to see DIVs */
+.pink {
+  background-color: #ff808b;
+}
+.yellow {
+  background-color: #f7e948;
+}
+.green {
+  background-color: #aead0d;
+}
+.blue {
+  background-color: #0457a0;
+}
+.purple {
+  background-color: #fe33ff;
+}
+
+/* control your content */
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.topleft {
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+.topright {
+  justify-content: flex-end;
+  align-items: flex-start;
+  display: flex;
+}
+.bottomleft {
+  justify-content: flex-start;
+  align-items: flex-end;
+  display: flex;
+}
+.bottomright {
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+}
+
+.resetButton {
+  max-height: 15%;
+  max-width: 15%;
+  position: absolute;
+}
+
+img {
+  max-height: 90%;
+  max-width: 90%;
+}

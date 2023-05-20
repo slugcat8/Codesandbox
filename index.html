@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Fall Final Exam</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="left">
+      <div class="row center-content">
+        <img src="images/reset.png" id="reset-button" class="resetButton hidden" onclick="reset()" />
+        <div class="box bottomright">
+          <!-- top left puzzle piece -->
+          <img src="images/puzzle/doodle1.jpg" id="puzzle1" class="non-clickable hidden"  onclick="piece(this)">
+        </div>
+        <div class="box bottomleft">
+           <!-- top right puzzle piece -->
+          <img src="images/puzzle/doodle1.jpg" id="puzzle2" class="non-clickable hidden" onclick="piece(this)">
+        </div>
+    </div>
+    <div class="row">
+        <div class="box topright">
+           <!-- bottom left puzzle piece -->
+          <img src="images/puzzle/doodle1.jpg" id="puzzle3" class="non-clickable hidden" onclick="piece(this)">
+        </div>
+        <div class="box topleft">
+          <!-- bottom right puzzle piece -->
+          <img src="images/puzzle/doodle1.jpg" id="puzzle4" class="non-clickable hidden" onclick="piece(this)">
+        </div>
+    </div>
+    </div>
+    <div class="right">
+        <div class="row">
+            <div class="box center-content yellow" id="top-left">
+              <img src="images/patrick.png" id="patrick" class="" onclick="changeToSponge(this, 'top-left')">
+            </div>
+            <div class="box center-content pink" id="top-right">
+              <img src="images/squidward.png" id="squidward" class="" onclick="changeToSponge(this, 'top-right')">
+            </div>
+        </div>
+        <div class="row">
+            <div class="box center-content purple" id="bottom-left">
+              <img src="images/sandy.png" id="sandy" class="" onclick="changeToSponge(this, 'bottom-left')">
+            </div>
+            <div class="box center-content green" id="bottom-right">
+              <img src="images/krabs.png" id="krabs" class="" onclick="changeToSponge(this, 'bottom-right')">
+            </div>
+        </div>
+    </div>
+  
+    <audio src="sounds/victoryscreech.mp3" id="done"></audio>
+    <script src="script.js"></script>
+</html>
