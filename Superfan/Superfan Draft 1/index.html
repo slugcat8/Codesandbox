@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="images/icons/slugcat_icon_cropped.jpg"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <title>Rain World Bestiary</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  
+    <div class="top">
+      <div class="zone fuchsia center-content">
+        <img
+          src="images/zones/outskirts.png"
+          id="zone1"
+          onclick="outskirtsSwitch()"
+          class="translucent"
+        />
+      </div>
+      <div class="zone light-orange center-content">
+        <img
+          src="images/zones/shaded_citadel.jpg"
+          id="zone2"
+          onclick="citadelSwitch()"
+        />
+      </div>
+      <div class="zone teal center-content">
+        <img
+          src="images/zones/shoreline.png"
+          id="zone3"
+          onclick="shorelineSwitch()"
+        />
+      </div>
+    </div>
+
+    <div class="info">
+      <div class="creature dark-grey center-content" id="box_entry">
+        <img
+          src="images/entries/outskirts/outskirts_entry.png"
+          onclick="playThreat()"
+          id="outskirts_entry"
+        />
+        <img
+          src="images/entries/outskirts/green_liz_charge.gif"
+          id="G_liz_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/outskirts/pink_liz_climb.gif"
+          id="P_liz_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/outskirts/nootfly_mother.gif"
+          id="nootfly_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/outskirts/squidcada_fishing.gif"
+          id="squidcada_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/shaded_citadel/shaded_citadel_entry.png"
+          id="shaded_citadel_entry"
+          onclick="playFloes()"
+          class="hide"
+        />
+        <img
+          src="images/entries/shaded_citadel/mole_hunting.gif"
+          id="mole_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/shaded_citadel/miros_flashbang.gif"
+          id="miros_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/shaded_citadel/spiders_kill.gif"
+          id="spiders_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/shaded_citadel/mouse_flicker.gif"
+          id="mouse_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/shoreline/shoreline_entry.png"
+          id="shoreline_entry"
+          class="hide"
+          onclick="playTheCoast()"
+        />
+        <img
+          src="images/entries/shoreline/salamander_grab.gif"
+          id="salamander_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/shoreline/jetfish_riding.gif"
+          id="jetfish_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/shoreline/leviathan_kill.gif"
+          id="leviathan_entry"
+          class="hide"
+        />
+        <img
+          src="images/entries/shoreline/vulture_flying.gif"
+          id="vulture_entry"
+          class="hide"
+        />
+      </div>
+      <div class="description fuchsia" id="description">
+        <div class="text fuchsia center-content" id="text1">
+          <!-- outskirts bio -->
+          <h2 id="outskirts_bio">
+            Description:
+            <span style="font-weight: normal;"
+              >the outskirts are an artificial landscape reclaimed by nature.
+              They are home to an abundance of life and competition
+            </span>
+          </h2>
+          <!-- green lizard basic info -->
+          <h2 id="G_liz_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">green lizard</span> Location:
+            <span style="font-weight: normal;">outskirts</span>
+            Disposition: <span style="font-weight: normal;">hostile</span>
+          </h2>
+          <!-- pink lizard basic info -->
+          <h2 id="P_liz_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">pink lizard</span>
+            Location:
+            <span style="font-weight: normal;">outskirts</span>
+            Disposition: <span style="font-weight: normal;">hostile</span>
+          </h2>
+          <!-- noodlefly basic info -->
+          <h2 id="nootfly_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">noodlefly</span> Location:
+            <span style="font-weight: normal;">outskirts</span>
+            Disposition: <span style="font-weight: normal;">neutral</span>
+          </h2>
+          <!-- squidcada basic info -->
+          <h2 id="squidcada_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">squidcada</span> Location:
+            <span style="font-weight: normal;">outskirts</span>
+            Disposition: <span style="font-weight: normal;">passive</span>
+          </h2>
+          <!-- shaded citadel bio -->
+          <h2 id="shaded_citadel_bio" class="hide">
+            Description:
+            <span style="font-weight: normal;"
+              >The shaded citadel is comprised of open bridges and tight
+              corridors, all bathed in perpetual darkness
+            </span>
+          </h2>
+          <!-- mole basic info -->
+          <h2 id="mole_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">mole (black lizard)</span>
+            Location:
+            <span style="font-weight: normal;">shaded citadel</span>
+            Disposition: <span style="font-weight: normal;">hostile</span>
+          </h2>
+          <!-- miros bird basic info -->
+          <h2 id="miros_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">miros bird</span>
+            Location:
+            <span style="font-weight: normal;">shaded citadel</span>
+            Disposition: <span style="font-weight: normal;">hostile</span>
+          </h2>
+          <!-- spiders basic info -->
+          <h2 id="spiders_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">spider</span>
+            Location:
+            <span style="font-weight: normal;">shaded citadel</span>
+            Disposition: <span style="font-weight: normal;">hostile</span>
+          </h2>
+          <!-- lantern mouse basic info -->
+          <h2 id="mouse_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">lantern mouse</span>
+            Location:
+            <span style="font-weight: normal;">shaded citadel</span>
+            Disposition: <span style="font-weight: normal;">passive</span>
+          </h2>
+          <!-- shoreline bio -->
+          <h2 id="shoreline_bio" class="hide">
+            Description:
+            <span style="font-weight: normal;"
+              >shoreline is surounded by water and dotted with islands, as well
+              as abandoned pipes which lead to the subtarranean levels
+            </span>
+          </h2>
+          <!-- salamander basic info -->
+          <h2 id="salamander_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">salamander</span>
+            Location:
+            <span style="font-weight: normal;">shoreline</span>
+            Disposition: <span style="font-weight: normal;">hostile</span>
+          </h2>
+          <!-- jetfish basic info -->
+          <h2 id="jetfish_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">jetfish</span>
+            Location:
+            <span style="font-weight: normal;">shoreline</span>
+            Disposition: <span style="font-weight: normal;">neutral</span>
+          </h2>
+          <!-- leviathan basic info -->
+          <h2 id="leviathan_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">leviathan</span>
+            Location:
+            <span style="font-weight: normal;">shoreline</span>
+            Disposition: <span style="font-weight: normal;">hostile</span>
+          </h2>
+          <!-- vulture basic info -->
+          <h2 id="vulture_bio" class="hide">
+            Creature:
+            <span style="font-weight: normal;">vulture</span>
+            Location:
+            <span style="font-weight: normal;">shoreline</span>
+            Disposition: <span style="font-weight: normal;">hostile</span>
+          </h2>
+        </div>
+        <div class="text fuchsia center-content" id="text2">
+          <!-- outskirts inhabitants -->
+          <h2 id="outskirts_inhabitants">
+            Inhabitants:
+            <span style="font-weight: normal;"
+              >Creatures in the outskirts are fierce and well adapted to the
+              former city landscape</span
+            >
+          </h2>
+          <!-- green lizard behavior -->
+          <h2 id="G_liz_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >green lizards are big and slow, but can charge at prey after a
+              wind-up</span
+            >
+          </h2>
+          <!-- pink lizard behavior -->
+          <h2 id="P_liz_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >pink lizards are more agile than green lizards, and can even
+              climb to pursue prey</span
+            >
+          </h2>
+          <!-- noodlefly behavior -->
+          <h2 id="nootfly_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >noodleflies are typicaly docile, but mothers will fiercly defend
+              their young, and can carry their babies in a chain</span
+            >
+          </h2>
+          <!-- squidcada behavior -->
+          <h2 id="squidcada_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >squidcada are bee-like flying creatures which can dive for fish,
+              and will harass any creature that is bothering them</span
+            >
+          </h2>
+          <!-- shaded_citadel inhabitants -->
+          <h2 id="shaded_citadel_inhabitants" class="hide">
+            Inhabitants:
+            <span style="font-weight: normal;"
+              >the citadel's inhabitants have evolved bioluminscence and other
+              traits to combat the inate darkness</span
+            >
+          </h2>
+          <!-- mole behavior -->
+          <h2 id="mole_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >moles are blind, but have excellent hearing, relying on sound to
+              catch prey in the pitch blackness of the citadel</span
+            >
+          </h2>
+          <!-- miros behavior -->
+          <h2 id="miros_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >miros birds are fast and violent automatons modeled after birds.
+              Their high light sensitivity can be used against them
+            </span>
+          </h2>
+          <!-- spider behavior -->
+          <h2 id="spiders_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >spiders are meek and fear light, but larger numbers can form into
+              monstrous centipedes which don't share this weakness
+            </span>
+          </h2>
+          <!-- lantern mouse behavior -->
+          <h2 id="mouse_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >lantern mice are small bioluminescent critters with the ability
+              to control how much light they emit
+            </span>
+          </h2>
+          <!-- shoreline inhabitants -->
+          <h2 id="shoreline_inhabitants" class="hide">
+            Inhabitants:
+            <span style="font-weight: normal;"
+              >most creatures in shoreline are aquatic, save for one fearsome
+              flying predator
+            </span>
+          </h2>
+          <!-- salamander behavior -->
+          <h2 id="salamander_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >salamanders are the aquatic cousins of other lizard species. They
+              can swim fast, and can climb poles similar to pink lizards
+            </span>
+          </h2>
+          <!-- jetfish behavior -->
+          <h2 id="jetfish_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >jetfish are aquatic animals which move through water using
+              propulsion. Although playful, they are known to violently steal
+              food
+            </span>
+          </h2>
+          <!-- leviathan behavior -->
+          <h2 id="leviathan_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >leviathans are massive underwater apex predators that can eat
+              anything, even other large predators such as vultures.
+            </span>
+          </h2>
+          <!-- vulture behavior -->
+          <h2 id="vulture_behavior" class="hide">
+            Behaviour:
+            <span style="font-weight: normal;"
+              >vultures are apex flying predators that propel themselves through
+              the air with colorful fumes.
+            </span>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="portrait light-grey center-content" id="box1">
+        <img
+          src="images/portraits/outskirts/Greenwalk.gif"
+          id="G_liz_portrait"
+          onclick="gLizClick()"
+        />
+        <img
+          src="images/portraits/shaded_citadel/molewalk.gif"
+          id="mole_portrait"
+          onclick="moleClick()"
+          class="hide"
+        />
+        <img
+          src="images/portraits/shoreline/swimboy.gif"
+          id="salamander_portrait"
+          onclick="salamanderClick()"
+          class="hide"
+        />
+      </div>
+      <div class="portrait light-grey center-content" id="box2">
+        <img
+          src="images/portraits/outskirts/Purplewalk.gif"
+          id="P_liz_portrait"
+          onclick="pLizClick()"
+        />
+        <img
+          src="images/portraits/shaded_citadel/miros_portrait.png"
+          id="miros_portrait"
+          onclick="mirosClick()"
+          class="hide"
+        />
+        <img
+          src="images/portraits/shoreline/jetfish_cropped.png"
+          id="jetfish_portrait"
+          onclick="jetfishClick()"
+          class="hide"
+        />
+      </div>
+      <div class="portrait light-grey center-content" id="box3">
+        <img
+          src="images/portraits/outskirts/Nootfly.gif"
+          id="nootfly_portrait"
+          onclick="nootflyClick()"
+        />
+        <img
+          src="images/portraits/shaded_citadel/spiders.gif"
+          id="spiders_portrait"
+          onclick="spidersClick()"
+          class="hide"
+        />
+        <img
+          src="images/portraits/shoreline/leviathan.png"
+          id="leviathan_portrait"
+          onclick="leviathanClick()"
+          class="hide"
+        />
+      </div>
+      <div class="portrait light-grey center-content border" id="box4">
+        <img
+          src="images/portraits/outskirts/Squidcadas.gif"
+          id="squidcada_portrait"
+          onclick="squidcadaClick()"
+        />
+        <img
+          src="images/portraits/shaded_citadel/mousewalk.gif"
+          id="mouse_portrait"
+          onclick="mouseClick()"
+          class="hide"
+        />
+        <img
+          src="images/portraits/shoreline/vulture.png"
+          id="vulture_portrait"
+          onclick="vultureClick()"
+          class="hide"
+        />
+      </div>
+    </div>
+
+    <audio>
+        <audio src="audio/tracks/threat.mp3" id="threat" loop>
+
+        <audio src="audio/tracks/floes.mp3" id="floes" loop>
+
+        <audio src="audio/tracks/the_coast.mp3" id="the_coast" loop>
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
