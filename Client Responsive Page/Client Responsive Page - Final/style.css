@@ -1,0 +1,139 @@
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: black;
+}
+
+/* divide up your page */
+.HalfPillar {
+  height: 100%;
+  width: 2.5%;
+}
+
+.frame {
+  height: 100%;
+  width: 27.5%;
+}
+
+.column {
+  height: 100%;
+  width: 6.25%;
+}
+
+/* these classes are POSITION FIXED so they are not part of the DOM */
+.top-track {
+  position: fixed;
+  top: 11.5%;
+  width: 100%;
+  height: 6.25vw;
+  z-index: 99;
+}
+
+.bottom-track {
+  position: fixed;
+  bottom: 11.5%;
+  width: 100%;
+  height: 6.25vw;
+  z-index: 99;
+}
+
+/* control your content */
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+/* making a rule for all images */
+img {
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.desktop {
+  display: flex;
+}
+.mobile {
+  display: none;
+}
+
+/* colors */
+.light_pink {
+  background-color: #ef709d;
+}
+.dark_blue {
+  background-color: #3772ff;
+}
+.light_blue {
+  background-color: #70e4ef;
+}
+
+.light_green {
+  background-color: #5ad55a;
+}
+.hot_pink {
+  background-color: #f038ff;
+}
+.light_yellow {
+  background-color: #e2ef70;
+}
+
+.black {
+  background-color: #303030ff;
+}
+
+/* responsive breakpoints */
+
+@media only screen and (max-width: 500px) {
+  body {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .HalfPillar {
+    height: 2.5%;
+    width: 100%;
+  }
+
+  .frame {
+    height: 27.5%;
+    width: 100%;
+  }
+
+  .column {
+    height: 6.25%;
+    width: 100%;
+  }
+
+  .top-track {
+    position: fixed;
+    right: 5%;
+    top: 0%;
+    width: 6.25vw;
+    height: 100%;
+    z-index: 99;
+  }
+
+  .bottom-track {
+    position: fixed;
+    left: 5%;
+    bottom: 0%;
+    width: 6.25vw;
+    height: 100%;
+    z-index: 99;
+  }
+
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+
+  .orientation_rings {
+    transform: rotate(90deg);
+  }
+}
