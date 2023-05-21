@@ -1,0 +1,168 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: block;
+  background-image: url(images/background.jpg);
+}
+
+.border {
+  height: 10%;
+  width: 100%;
+  display: flex;
+}
+
+.help-box {
+  height: 100%;
+  width: 5%;
+}
+
+.grid-container {
+  height: 80%;
+  width: 100%;
+  display: flex;
+}
+
+.grid {
+  height: 100%;
+  width: 70%;
+  display: flex;
+}
+
+.column {
+  height: 100%;
+  width: calc(100% / 6);
+  display: block;
+}
+
+.tile1 {
+  height: calc(100% / 4);
+  width: 100%;
+  display: flex;
+}
+
+.tile2 {
+  height: calc(100% / 4);
+  width: 100%;
+  display: flex;
+}
+
+/* Content Control */
+
+.align-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.align-right {
+  margin-left: auto;
+  margin-right: 0px;
+}
+
+.align-top {
+  align-items: flex-start;
+}
+
+.align-bottom {
+  align-items: flex-end;
+}
+
+.convert-flex {
+  display: flex;
+}
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.force-fit {
+  height: 100%;
+  width: 100%;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/* UX */
+
+img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.tile-select {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgb(255, 255, 125));
+}
+
+.non-clickable:hover {
+  cursor: auto;
+  opacity: 100%;
+}
+
+.clear {
+  opacity: 0.5;
+}
+
+.tag {
+  display: flex;
+}
+
+.correct-position {
+  cursor: pointer;
+  visibility: hidden;
+  z-index: 10;
+  background-color: rgba(47, 255, 28, 255);
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: purple;
+  opacity: 0.95;
+}
+
+.modal-content {
+  width: 10%;
+  height: 30%;
+  opacity: 1;
+  margin: 0;
+}
+
+/* Colors */
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.white {
+  background-color: white;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.black {
+  background-color: black;
+}
