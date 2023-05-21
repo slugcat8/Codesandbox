@@ -1,0 +1,96 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+/* opaque = not able to be seen through, the default opacity for elements is 1 */
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.remove_all {
+  display: none;
+}
+
+.tall {
+  height: 100%;
+}
+
+.spin {
+  transform: rotate(45deg);
+  transition-duration: 2s;
+}
+
+.turn_background_black {
+  background-color: #000000;
+}
+
+.add_text:after {
+  font-weight: bold;
+  color: navy;
+  content: "AAAAAAAHHHHHHHHHHHHHHHH";
+  word-wrap: break-word;
+}
+
+.contain_image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.hide {
+  display: none;
+}
+/* colors */
+.green {
+  background-color: #008d24;
+}
+.light_blue {
+  background-color: #0b69c0;
+}
+.purple {
+  background-color: #3a246d;
+}
+.red {
+  background-color: #ca1b22;
+}
+.orange {
+  background-color: #ea6626;
+}
+.black {
+  background-color: #000000;
+}
+.white {
+  background-color: #ffffff;
+}
+.light-grey {
+  background-color: #a9a9a9;
+}
+.dark-grey {
+  background-color: #707070;
+}
+.fuchsia {
+  background-color: #ff00ff;
+}
+
+.baby_blue {
+  background-color: #89cff0;
+}
+
+/* you may choose to use this class for one of the challenges */
+.none {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+}
+h1 {
+  font-size: 100px;
+}

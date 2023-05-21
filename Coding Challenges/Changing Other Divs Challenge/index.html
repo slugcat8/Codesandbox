@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your 1st JS!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="back_layer">
+    <!-- Notice how each div has an 'onclick' attribute which links to a function in the JS file -->
+    <div class="box green" onclick="turnOrange()" id="box1">
+      <img
+        src="images/amogus_shrek.png"
+        id="img1"
+        class="contain_image hide"
+      />
+    </div>
+    <div class="box purple" onclick="removePurple()" id="box2">
+      <img
+        src="images/amogus_shrek.png"
+        id="img2"
+        class="contain_image hide"
+      />
+    </div>
+    <div class="box red" onclick="turnGreen()" id="box3">
+      <img
+        src="images/amogus_shrek.png"
+        id="img3"
+        class="contain_image hide"
+      />
+    </div>
+    <div class="box orange" onclick="lengthenAll()" id="box4">
+      <img
+        src="images/amogus_shrek.png"
+        id="img4"
+        class="contain_image hide"
+      />
+    </div>
+    <div class="box black" onclick="turnBackgroundBlack()" id="box5">
+      <img
+        src="images/amogus_shrek.png"
+        id="img5"
+        class="contain_image hide"
+      />
+    </div>
+    <div class="box dark-grey" onclick="addText()" id="box6">
+      <img
+        src="images/amogus_shrek.png"
+        id="img6"
+        class="contain_image hide"
+      />
+    </div>
+    <div
+      class="box light-grey center-content"
+      onclick="addImage()"
+      id="box7"
+    />
+  </div>
+
+<!-- fun extras! -->
+  <div class="box fuchsia" onclick="wildCard()" id="box8"></div>
+
+  <div class="box baby_blue hide" onclick="killSwitch()" id="box9"></div>
+
+  <script src="script.js"></script>
+  </body>
+</html>

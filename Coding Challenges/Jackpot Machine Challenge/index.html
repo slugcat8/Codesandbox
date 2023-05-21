@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cycling Images</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="row1">
+      <!-- FIRST SLOT -->
+      <div class="box center-content">
+        <img src="images/cherry_slot.PNG" id="slot_1" onclick="clickSlot1()" />
+      </div>
+      <!-- SECOND SLOT -->
+      <div class="box center-content">
+        <img src="images/lemon_slot.PNG" id="slot_2" onclick="clickSlot2()" />
+      </div>
+      <!-- THIRD SLOT -->
+      <div class="box center-content">
+        <img src="images/orange_slot.PNG" id="slot_3" onclick="clickSlot3()" />
+      </div>
+    </div>
+
+    <!-- JACKPOT -->
+    <div class="row2 grey center-content">
+      <img src="images/jackpot.png" id="jackpot" onclick="clickJackpot()" />
+    </div>
+
+    <audio src="sounds/winner.mp3" type="audio/mp3" id="you_win"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
