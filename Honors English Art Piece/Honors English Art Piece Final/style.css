@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  display: block;
+  background-color: black;
+  overflow: hidden;
+}
+
+.text {
+  font-family: "Old Standard TT", serif;
+  font-size: 70px;
+  line-height: 1.5;
+  margin: 5;
+  color: white;
+}
+
+/* build your layout */
+.box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.text-box {
+  height: 85%;
+  width: 85%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+}
+
+.green-light {
+  max-height: 10%;
+  max-width: 10%;
+}
+
+.woman {
+  max-height: 70%;
+  max-width: 70%;
+  position: absolute;
+  translate: 500% 0%;
+  opacity: 1;
+}
+
+.red-light {
+  max-height: 10%;
+  max-width: 10%;
+}
+/* control your content */
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.visible {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+/* animations */
+@keyframes increase-size1 {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 4;
+  }
+}
+
+.play-increase-size1 {
+  animation-name: increase-size1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes increase-size2 {
+  from {
+    scale: 4;
+  }
+  to {
+    scale: 8;
+  }
+}
+
+.play-increase-size2 {
+  animation-name: increase-size2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes increase-size3 {
+  from {
+    scale: 8;
+  }
+  to {
+    scale: 14;
+  }
+}
+
+.play-increase-size3 {
+  animation-name: increase-size3;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dissapear {
+  from {
+    scale: 14;
+    opacity: 1;
+  }
+  to {
+    scale: 14;
+    opacity: 0;
+  }
+}
+
+.play-dissapear {
+  animation-name: dissapear;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  from {
+    opcaity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.play-appear {
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-to-left {
+  from {
+    translate: 0% 0%;
+  }
+  to {
+    translate: -100% 0%;
+  }
+}
+
+.play-slide-to-left {
+  animation-name: slide-to-left;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in-from-right {
+  from {
+    translate: 500% 0%;
+  }
+  to {
+    translate: 0% 0%;
+  }
+}
+
+.play-slide-in-from-right {
+  animation-name: slide-in-from-right;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in-red-light {
+  from {
+    scale: 1;
+    translate: 0% 0%;
+  }
+  to {
+    scale: 60;
+    translate: 0% 0%;
+  }
+}
+
+.play-fade-in-red-light {
+  animation-name: fade-in-red-light;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.play-fade {
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+/* colors */
+.black {
+  background-color: #000000;
+}
+.pink {
+  background-color: #eb5674;
+}
+.yellow {
+  background-color: #fbee40;
+}
+.orange {
+  background-color: #fd5632;
+}
+.grey {
+  background-color: #d3d3d3;
+}
+.dark-grey {
+  background-color: #a9a9a9;
+}
