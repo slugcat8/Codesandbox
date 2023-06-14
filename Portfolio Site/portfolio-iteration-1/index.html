@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Template</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div class="heading center-content">
+      <h1>
+        Micah's Awesome Portfolio Site
+      </h1>
+    </div>
+
+    <div class="menu" id="menu">
+      <div class="row center-content">
+          <div class ="box center-content b1" id="b1">
+          <h2>
+            About
+          <h2>
+        </div>
+      </div>
+      <div class="row center-content">
+        <div class ="box center-content b4" id="b2">
+          <h2>
+            My Projects
+          <h2>
+        </div>
+      </div>
+      <div class="row center-content">
+        <div class ="box center-content b3" id="b3">
+          <h2>
+            LinkedIn
+          <h2>
+        </div>
+      </div>
+    </div>
+      <div class="modal center-content" id="modal1">
+        <div class="modal-content">
+          <span class="close" id="x1" onclick="hideModal('modal1')">&times</span>
+          <img class="center-content" src="images/headshot.png"></img>
+          <p>Hi! I'm Micah, an spiring front-end developer, and this is my portfolio site! Feel free to view my projects at your lesirue, and if you are intrigued by my work, don't hesitate to reach out to me on LinkedIn. I am currently looking for interships and part-time positions related to comp sci and front-end.</p>
+        </div>
+      </div>
+      <div class="modal center-content" id="modal2">
+        <div class="modal-content">
+          <span class="close" id="x2" onclick="hideModal('modal2')">&times</span>
+          <img class="center-content" src="images/escapeRoom.png"></img>
+          <p><a href="https://yot34z.csb.app/" style="color: white;">Escape Room Puzzle</a></p>
+          <img class="center-content" src="images/manifolds.png"></img>
+          <p><a href="https://qv3kct.csb.app/" style="color: white;">JavaScript Demo</a></p>
+        </div>
+      </div>
+      <div class="modal center-content" id="modal3">
+      </div>
+      
+      </div>
+    </div>
+    <div class="filler"></div>
+
+   <script src="script.js"></script>
+  </body>
+</html>

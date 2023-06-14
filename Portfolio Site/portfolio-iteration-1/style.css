@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  background-color: #05998c;
+  font-size: 50px;
+}
+
+.heading {
+  display: flex;
+  height: 20%;
+  width: 100%;
+}
+
+.menu {
+  display: block;
+  height: 70%;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  height: calc(100% / 3);
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  position: relative;
+  height: 60%;
+  width: 40%;
+  border: 4px solid transparent;
+  border-radius: 20px;
+  animation: none;
+  cursor: pointer;
+}
+
+.box:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 4px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+@keyframes option-select-flashing {
+  0% {
+    border: 4px solid transparent;
+  }
+  50% {
+    border: 4px solid white;
+  }
+  100% {
+    border: 4px solid transparent;
+  }
+}
+
+.filler {
+  height: 10%;
+  width: 100%;
+}
+
+/* TEXT FORMATTING */
+
+h1 {
+  font-family: "rodondoregular";
+  font-size: 1.5em;
+  /*font-size: 75px*/
+  margin: 2;
+  color: white;
+}
+
+h2 {
+  font-family: "Jura", sans-serif;
+  font-size: 1em;
+  /*font-size: 50px*/
+  font-weight: normal;
+  color: white;
+}
+
+p {
+  font-family: "jura", sans-serif;
+  font-size: 1em;
+  /*font-size: 50px*/
+  margin: 5;
+  line-height: 2;
+  color: white;
+}
+
+/* IMAGE FORMATTING */
+
+img {
+  max-height: 80%;
+  max-width: 80%;
+}
+
+/* PAGE FORMATTING */
+
+.center-content {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: text-bottom;
+}
+
+/* MODAL FORMATTING */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  width: 70%;
+  height: 60%;
+  margin: 0;
+  padding: 10px 20px;
+  opacity: 0.8;
+  border: 4px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+  color: #ff331f;
+}
+
+/* UX */
+
+.b:before {
+  border-color: white;
+}
+
+.teal {
+  background-color: #05998c;
+}
+
+.box:hover {
+  scale: 1.1;
+  animation: option-select-flashing 0.5s infinite;
+}
